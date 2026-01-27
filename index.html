@@ -2,7 +2,10 @@
 <html lang="id" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>AturFin - Solusi Lunas Hutang & Bebas Teror</title>
 
     <link href="./src/output.css" rel="stylesheet" />
@@ -18,13 +21,23 @@
     />
 
     <style>
+      /* --- PERBAIKAN UTAMA: Mencegah Scroll Samping (Geser-geser) --- */
+      html,
+      body {
+        width: 100%;
+        overflow-x: hidden; /* Kunci agar tidak bisa digeser ke samping */
+        position: relative;
+        margin: 0;
+        padding: 0;
+      }
+
       body {
         font-family: "Plus Jakarta Sans", sans-serif;
       }
 
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
-        width: 10px;
+        width: 8px; /* Diperkecil sedikit untuk mobile */
       }
       ::-webkit-scrollbar-track {
         background: #f1f5f9;
@@ -55,7 +68,7 @@
         transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
       }
       .faq-item.active .faq-content {
-        max-height: 500px; /* Cukup tinggi untuk konten text */
+        max-height: 500px;
         transition: max-height 0.5s ease-in-out;
       }
       .faq-icon {
@@ -94,17 +107,17 @@
     </style>
   </head>
   <body
-    class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden pt-32 md:pt-40"
+    class="bg-slate-50 text-slate-800 antialiased pt-28 md:pt-40 selection:bg-blue-100 selection:text-blue-700"
   >
     <div id="progressBar"></div>
 
     <button
       id="backToTop"
       onclick="scrollToTop()"
-      class="fixed bottom-24 right-6 w-12 h-12 bg-white text-blue-600 border-2 border-blue-600 rounded-full shadow-lg flex items-center justify-center z-40 hover:bg-blue-600 hover:text-white"
+      class="fixed bottom-24 right-4 md:right-6 w-10 h-10 md:w-12 md:h-12 bg-white text-blue-600 border-2 border-blue-600 rounded-full shadow-lg flex items-center justify-center z-40 hover:bg-blue-600 hover:text-white"
       aria-label="Kembali ke atas"
     >
-      <i class="fas fa-chevron-up"></i>
+      <i class="fas fa-chevron-up text-sm md:text-base"></i>
     </button>
 
     <nav
@@ -112,7 +125,7 @@
       id="navbar"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-24 md:h-32">
+        <div class="flex justify-between items-center h-20 md:h-32">
           <div
             class="flex-shrink-0 cursor-pointer py-2"
             onclick="scrollToTop()"
@@ -120,7 +133,7 @@
             <img
               src="./assets/images/logo-aturfin.png"
               alt="AturFin"
-              class="h-12 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105"
+              class="h-10 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105"
             />
           </div>
 
@@ -164,7 +177,7 @@
               class="text-slate-600 hover:text-blue-600 focus:outline-none p-2"
             >
               <i
-                class="fa-solid fa-bars text-3xl transition-transform duration-300"
+                class="fa-solid fa-bars text-2xl transition-transform duration-300"
                 id="menuIcon"
               ></i>
             </button>
@@ -219,7 +232,7 @@
 
     <section
       id="hero"
-      class="pt-12 pb-16 md:pt-16 md:pb-24 lg:pt-24 lg:pb-32 bg-gradient-to-b from-blue-50/80 via-white to-white overflow-hidden relative"
+      class="pt-6 pb-12 md:pt-16 md:pb-24 lg:pt-24 lg:pb-32 bg-gradient-to-b from-blue-50/80 via-white to-white overflow-hidden relative"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
@@ -229,7 +242,7 @@
             data-aos-duration="1000"
           >
             <div
-              class="mb-8 relative group cursor-pointer"
+              class="mb-6 md:mb-8 relative group cursor-pointer"
               data-aos="zoom-in"
               data-aos-delay="200"
             >
@@ -244,11 +257,11 @@
             </div>
 
             <h1
-              class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-slate-900 leading-[1.15] mb-4 md:mb-6"
+              class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-slate-900 leading-[1.2] mb-4 md:mb-6"
             >
               Fokus Pada Hidup Anda,
               <span
-                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500"
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 block lg:inline"
                 >Biar Kami Yang Menangani.</span
               >
             </h1>
@@ -265,13 +278,13 @@
             >
               <button
                 onclick="scrollToSection('contact')"
-                class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold shadow-xl shadow-blue-500/20 transition flex items-center justify-center gap-2 transform hover:-translate-y-1"
+                class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold shadow-xl shadow-blue-500/20 transition flex items-center justify-center gap-2 transform hover:-translate-y-1 w-full sm:w-auto"
               >
                 Konsultasi Gratis <i class="fa-solid fa-arrow-right"></i>
               </button>
               <button
                 onclick="toggleWidget()"
-                class="px-8 py-4 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 rounded-xl font-bold transition flex items-center justify-center gap-2 hover:shadow-lg"
+                class="px-8 py-4 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 rounded-xl font-bold transition flex items-center justify-center gap-2 hover:shadow-lg w-full sm:w-auto"
               >
                 <i class="fa-brands fa-whatsapp text-green-500 text-xl"></i>
                 Tanya Admin
@@ -320,11 +333,11 @@
                 Layanan Kami
               </div>
               <h2
-                class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight"
+                class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-6 leading-tight"
               >
                 Solusi Mediasi Utang Pinjol Terpercaya
               </h2>
-              <p class="text-lg md:text-xl text-slate-700 leading-relaxed">
+              <p class="text-base md:text-xl text-slate-700 leading-relaxed">
                 Mengalami kesulitan akibat pinjaman online? Kami siap membantu
                 proses mediasi untuk meringankan beban Anda dengan pendekatan
                 yang legal dan manusiawi.
@@ -357,52 +370,60 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           <div
-            class="text-center p-6 rounded-2xl hover:bg-slate-50 transition duration-300"
+            class="text-center p-4 md:p-6 rounded-2xl hover:bg-slate-50 transition duration-300"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div class="text-4xl lg:text-5xl font-black text-blue-600 mb-2">
+            <div class="text-3xl lg:text-5xl font-black text-blue-600 mb-2">
               18K+
             </div>
-            <p class="text-sm font-bold text-slate-600 uppercase tracking-wide">
+            <p
+              class="text-xs md:text-sm font-bold text-slate-600 uppercase tracking-wide"
+            >
               Kasus Selesai
             </p>
           </div>
           <div
-            class="text-center p-6 rounded-2xl hover:bg-slate-50 transition duration-300"
+            class="text-center p-4 md:p-6 rounded-2xl hover:bg-slate-50 transition duration-300"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div class="text-4xl lg:text-5xl font-black text-green-600 mb-2">
+            <div class="text-3xl lg:text-5xl font-black text-green-600 mb-2">
               98%
             </div>
-            <p class="text-sm font-bold text-slate-600 uppercase tracking-wide">
+            <p
+              class="text-xs md:text-sm font-bold text-slate-600 uppercase tracking-wide"
+            >
               Tingkat Sukses
             </p>
           </div>
           <div
-            class="text-center p-6 rounded-2xl hover:bg-slate-50 transition duration-300"
+            class="text-center p-4 md:p-6 rounded-2xl hover:bg-slate-50 transition duration-300"
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <div class="text-4xl lg:text-5xl font-black text-red-600 mb-2">
+            <div class="text-3xl lg:text-5xl font-black text-red-600 mb-2">
               100%
             </div>
-            <p class="text-sm font-bold text-slate-600 uppercase tracking-wide">
+            <p
+              class="text-xs md:text-sm font-bold text-slate-600 uppercase tracking-wide"
+            >
               Bantuan Negosiasi
             </p>
           </div>
           <div
-            class="text-center p-6 rounded-2xl hover:bg-slate-50 transition duration-300"
+            class="text-center p-4 md:p-6 rounded-2xl hover:bg-slate-50 transition duration-300"
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            <div class="text-4xl lg:text-5xl font-black text-cyan-600 mb-2">
+            <div class="text-3xl lg:text-5xl font-black text-cyan-600 mb-2">
               20M+
             </div>
-            <p class="text-sm font-bold text-slate-600 uppercase tracking-wide">
+            <p
+              class="text-xs md:text-sm font-bold text-slate-600 uppercase tracking-wide"
+            >
               Hutang Diatasi
             </p>
           </div>
@@ -412,7 +433,7 @@
 
     <section id="services" class="py-20 bg-slate-50 relative overflow-hidden">
       <div
-        class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-30"
+        class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-30 pointer-events-none"
       >
         <div
           class="absolute -top-24 -right-24 w-96 h-96 bg-blue-200 rounded-full blur-3xl"
@@ -1033,6 +1054,12 @@
           </div>
 
           <div class="md:w-7/12 p-8 md:p-12 bg-white relative">
+            <div
+              class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none"
+            >
+              <i class="fa-brands fa-whatsapp text-9xl"></i>
+            </div>
+
             <h4 class="text-2xl font-bold text-slate-800 mb-2 relative z-10">
               Mulai Langkah Bebas Hutang
             </h4>
@@ -1056,7 +1083,7 @@
                     type="text"
                     id="name"
                     class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition bg-slate-50 focus:bg-white"
-                    placeholder="Contoh: ABDURRAHIM"
+                    placeholder="Contoh: Budi Santoso"
                     required
                   />
                 </div>
@@ -1076,7 +1103,7 @@
                     type="tel"
                     id="phone"
                     class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition bg-slate-50 focus:bg-white"
-                    placeholder="Contoh: 08528002528"
+                    placeholder="Contoh: 08123456789"
                     required
                   />
                 </div>
@@ -1188,7 +1215,7 @@
     <div class="fixed bottom-6 right-6 z-[100] font-sans">
       <div
         id="waWidgetCard"
-        class="absolute bottom-20 right-0 w-[320px] bg-[#f0f2f5] rounded-2xl shadow-2xl overflow-hidden border border-gray-200 ring-1 ring-black/5 transform transition-all duration-300 origin-bottom-right opacity-0 translate-y-10 scale-95 pointer-events-none"
+        class="absolute bottom-20 right-0 w-[calc(100vw-3rem)] md:w-[320px] bg-[#f0f2f5] rounded-2xl shadow-2xl overflow-hidden border border-gray-200 ring-1 ring-black/5 transform transition-all duration-300 origin-bottom-right opacity-0 translate-y-10 scale-95 pointer-events-none"
       >
         <div
           class="bg-[#075e54] p-4 flex justify-between items-center text-white"
@@ -1332,7 +1359,7 @@
         }
       };
 
-      // --- LOGIC WIDGET BARU (FIXED) ---
+      // Widget Logic
       function toggleWidget() {
         const widget = document.getElementById("waWidgetCard");
 
@@ -1380,8 +1407,8 @@
             alert("Mohon lengkapi nama dan nomor WhatsApp.");
             return;
           }
-          // Tanda bintang (*) membuat teks menjadi Bold di WhatsApp
-          const messageText = 
+
+          const messageText =
             `Halo Admin AturFin,\n\n` +
             `Saya ingin mengajukan permohonan konsultasi dengan data berikut:\n\n` +
             `👤 Nama Lengkap : *${name}*\n` +
@@ -1389,13 +1416,12 @@
             `📱 Jumlah Apps  : *${apps}*\n\n` +
             `Mohon bantuannya untuk analisa masalah ini. Terima kasih.`;
 
-          // 2. Fungsi ini WAJIB ada. 
-          // Ini yang mengubah \n menjadi kode WhatsApp yang benar secara otomatis
-          // sehingga simbol  TIDAK AKAN MUNCUL.
           const encodedMessage = encodeURIComponent(messageText);
 
-          // 3. Kirim ke WhatsApp
-          window.open(`https://wa.me/${adminNumber}?text=${encodedMessage}`, "_blank");
+          window.open(
+            `https://wa.me/${adminNumber}?text=${encodedMessage}`,
+            "_blank",
+          );
         });
 
       // Auto Open Widget
@@ -1432,20 +1458,15 @@
         }
       }
 
-      // Close items when clicking outside (FIXED)
+      // Close items when clicking outside
       document.addEventListener("click", function (event) {
-        // Widget
         const widget = document.getElementById("waWidgetCard");
         const waButton = document.getElementById("waButton");
-        const closeBtn = document.getElementById("closeWidgetBtn");
-
-        // Mobile Menu
         const mobileMenu = document.getElementById("mobileMenu");
         const menuBtn = document.querySelector(".md\\:hidden button");
 
         // Close Widget Logic
         if (!widget.classList.contains("opacity-0")) {
-          // Jika klik BUKAN pada widget, BUKAN pada tombol WA
           if (
             !widget.contains(event.target) &&
             !waButton.contains(event.target)
