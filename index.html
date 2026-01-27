@@ -6,6 +6,7 @@
     <title>AturFin - Solusi Lunas Hutang & Bebas Teror</title>
 
     <link href="./src/output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
@@ -92,7 +93,9 @@
       }
     </style>
   </head>
-  <body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden pt-20">
+  <body
+    class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden pt-32 md:pt-40"
+  >
     <div id="progressBar"></div>
 
     <button
@@ -109,12 +112,15 @@
       id="navbar"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16 md:h-20">
-          <div class="flex-shrink-0 cursor-pointer" onclick="scrollToTop()">
+        <div class="flex justify-between items-center h-24 md:h-32">
+          <div
+            class="flex-shrink-0 cursor-pointer py-2"
+            onclick="scrollToTop()"
+          >
             <img
               src="./assets/images/logo-aturfin.png"
               alt="AturFin"
-              class="h-8 md:h-10 w-auto"
+              class="h-12 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105"
             />
           </div>
 
@@ -158,7 +164,7 @@
               class="text-slate-600 hover:text-blue-600 focus:outline-none p-2"
             >
               <i
-                class="fa-solid fa-bars text-xl transition-transform duration-300"
+                class="fa-solid fa-bars text-3xl transition-transform duration-300"
                 id="menuIcon"
               ></i>
             </button>
@@ -213,7 +219,7 @@
 
     <section
       id="hero"
-      class="pt-8 pb-16 md:pt-12 md:pb-24 lg:pt-20 lg:pb-32 bg-gradient-to-b from-blue-50/80 via-white to-white overflow-hidden relative"
+      class="pt-12 pb-16 md:pt-16 md:pb-24 lg:pt-24 lg:pb-32 bg-gradient-to-b from-blue-50/80 via-white to-white overflow-hidden relative"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
@@ -304,32 +310,31 @@
             <div
               class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-blue-200/40 to-cyan-200/40 rounded-full filter blur-3xl -z-10 animate-pulse"
             ></div>
+
             <div
-              class="relative z-10 transition duration-500 hover:scale-[1.01]"
+              class="relative z-10 bg-white/60 backdrop-blur-sm p-6 md:p-8 rounded-3xl border border-white/60 shadow-xl transition duration-500 hover:shadow-2xl"
             >
               <div
-                class="bg-white p-3 rounded-3xl shadow-2xl border border-white/50"
+                class="inline-block px-4 py-2 mb-5 text-sm font-bold tracking-wider text-blue-600 uppercase bg-blue-100 rounded-full"
               >
-                <img
-                  src="./assets/images/hero-illustration.jpg"
-                  alt="Ilustrasi Keuangan"
-                  class="w-full h-auto rounded-2xl object-cover"
-                />
+                Layanan Kami
               </div>
-              <div
-                class="absolute -bottom-6 -left-4 bg-white p-4 rounded-xl shadow-xl border border-slate-50 flex items-center gap-4 animate-bounce"
-                style="animation-duration: 3s"
+              <h2
+                class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight"
               >
+                Solusi Mediasi Utang Pinjol Terpercaya
+              </h2>
+              <p class="text-lg md:text-xl text-slate-700 leading-relaxed">
+                Mengalami kesulitan akibat pinjaman online? Kami siap membantu
+                proses mediasi untuk meringankan beban Anda dengan pendekatan
+                yang legal dan manusiawi.
+              </p>
+
+              <div class="mt-6 flex justify-end">
                 <div
-                  class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600"
+                  class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white animate-bounce"
                 >
-                  <i class="fa-solid fa-phone-slash text-xl"></i>
-                </div>
-                <div>
-                  <p class="text-xs font-bold text-slate-400 uppercase">
-                    Status Saat Ini
-                  </p>
-                  <p class="font-bold text-slate-900">Stop Teror DC</p>
+                  <i class="fa-solid fa-hand-holding-heart text-2xl"></i>
                 </div>
               </div>
             </div>
@@ -420,19 +425,13 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="flex flex-col lg:flex-row items-center gap-16">
           <div class="w-full lg:w-1/2" data-aos="fade-right">
-            <div
-              class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-blue-600 uppercase bg-blue-100 rounded-full"
-            >
-              Layanan Kami
+            <div class="mb-8">
+              <span
+                class="inline-block px-4 py-2 text-sm font-bold tracking-wider text-blue-600 uppercase bg-blue-100 rounded-full"
+              >
+                LAYANAN KAMI
+              </span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">
-              Solusi Mediasi Utang Pinjol Terpercaya
-            </h2>
-            <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-              Mengalami kesulitan akibat pinjaman online? Kami siap membantu
-              proses mediasi untuk meringankan beban Anda dengan pendekatan yang
-              legal dan manusiawi.
-            </p>
 
             <div class="grid grid-cols-1 gap-4">
               <div
@@ -975,90 +974,143 @@
     </section>
 
     <section id="contact" class="py-20 bg-white">
-      <div class="max-w-4xl mx-auto px-4">
+      <div class="max-w-5xl mx-auto px-4">
         <div
           class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row border border-slate-100"
+          data-aos="zoom-in"
         >
-          <div
-            class="md:w-5/12 relative p-10 text-white flex flex-col justify-between overflow-hidden bg-cover bg-center"
-            style="
-              background-image: url(&quot;./assets/images/konsultasi-gratis.jpg&quot;);
-            "
-          >
-            <div class="absolute inset-0 bg-blue-900/90 z-0"></div>
-            <div class="relative z-10">
+          <div class="md:w-5/12 flex flex-col relative bg-blue-900">
+            <div class="absolute inset-0 z-0 opacity-20">
+              <img
+                src="./assets/images/konsultasi-gratis.jpg"
+                alt="Background"
+                class="w-full h-full object-cover grayscale mix-blend-multiply"
+              />
+            </div>
+
+            <div
+              class="relative z-10 p-8 md:p-10 text-white flex-1 flex flex-col justify-center"
+            >
               <img
                 src="./assets/images/logo-aturfin.png"
                 alt="Logo"
-                class="h-10 w-auto brightness-0 invert opacity-90 mb-6"
+                class="h-10 w-auto brightness-0 invert opacity-90 mb-8 self-start"
               />
-              <h3 class="text-2xl font-extrabold mb-4">Konsultasi Gratis</h3>
+
+              <h3 class="text-3xl font-extrabold mb-4 leading-tight">
+                Konsultasi<br />Gratis
+              </h3>
+
               <p class="text-blue-100 text-sm mb-8 leading-relaxed">
                 Isi formulir di samping, tim ahli kami akan menganalisa masalah
                 Anda dan menghubungi via WhatsApp dalam waktu kurang dari 15
                 menit.
               </p>
-              <div class="space-y-3 text-sm">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-shield-halved text-cyan-400"></i>
+
+              <div class="space-y-4 text-sm font-medium">
+                <div
+                  class="flex items-center gap-3 bg-white/10 p-3 rounded-lg backdrop-blur-sm border border-white/10"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center"
+                  >
+                    <i class="fa-solid fa-shield-halved text-cyan-400"></i>
+                  </div>
                   <span>Privasi 100% Aman</span>
                 </div>
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-money-bill-1-wave text-cyan-400"></i>
+                <div
+                  class="flex items-center gap-3 bg-white/10 p-3 rounded-lg backdrop-blur-sm border border-white/10"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center"
+                  >
+                    <i class="fa-solid fa-money-bill-1-wave text-cyan-400"></i>
+                  </div>
                   <span>Tanpa Biaya Awal</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="md:w-7/12 p-8 md:p-12 bg-white">
-            <h4 class="text-xl font-bold text-slate-800 mb-6">
+          <div class="md:w-7/12 p-8 md:p-12 bg-white relative">
+            <h4 class="text-2xl font-bold text-slate-800 mb-2 relative z-10">
               Mulai Langkah Bebas Hutang
             </h4>
-            <form id="waForm" class="space-y-5">
+            <p class="text-slate-500 text-sm mb-8 relative z-10">
+              Silahkan lengkapi data diri Anda dibawah ini.
+            </p>
+
+            <form id="waForm" class="space-y-5 relative z-10">
               <div>
                 <label
-                  class="block text-xs font-bold text-slate-500 uppercase mb-2"
+                  class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1"
                   >Nama Lengkap</label
                 >
-                <input
-                  type="text"
-                  id="name"
-                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition bg-slate-50 focus:bg-white"
-                  placeholder="Contoh: Budi Santoso"
-                  required
-                />
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400"
+                  >
+                    <i class="fa-regular fa-user"></i>
+                  </div>
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition bg-slate-50 focus:bg-white"
+                    placeholder="Contoh: ABDURRAHIM"
+                    required
+                  />
+                </div>
               </div>
               <div>
                 <label
-                  class="block text-xs font-bold text-slate-500 uppercase mb-2"
+                  class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1"
                   >Nomor WhatsApp</label
                 >
-                <input
-                  type="tel"
-                  id="phone"
-                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition bg-slate-50 focus:bg-white"
-                  placeholder="Contoh: 08123456789"
-                  required
-                />
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400"
+                  >
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </div>
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition bg-slate-50 focus:bg-white"
+                    placeholder="Contoh: 08528002528"
+                    required
+                  />
+                </div>
               </div>
               <div>
                 <label
-                  class="block text-xs font-bold text-slate-500 uppercase mb-2"
+                  class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1"
                   >Total Aplikasi Pinjol</label
                 >
-                <select
-                  id="apps"
-                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition bg-slate-50 focus:bg-white cursor-pointer"
-                >
-                  <option>1 - 5 Aplikasi</option>
-                  <option>6 - 10 Aplikasi</option>
-                  <option>Lebih dari 10 Aplikasi</option>
-                </select>
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400"
+                  >
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                  </div>
+                  <select
+                    id="apps"
+                    class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition bg-slate-50 focus:bg-white cursor-pointer appearance-none"
+                  >
+                    <option>1 - 5 Aplikasi</option>
+                    <option>6 - 10 Aplikasi</option>
+                    <option>Lebih dari 10 Aplikasi</option>
+                  </select>
+                  <div
+                    class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-slate-400"
+                  >
+                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                  </div>
+                </div>
               </div>
+
               <button
                 type="submit"
-                class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition transform hover:scale-[1.01] flex items-center justify-center gap-2 text-lg"
+                class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-green-500/30 transition transform hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 text-lg"
               >
                 <i class="fa-brands fa-whatsapp text-2xl"></i> Hubungi via
                 WhatsApp
@@ -1075,7 +1127,7 @@
           <img
             src="./assets/images/logo-aturfin.png"
             alt="AturFin"
-            class="h-10 w-auto brightness-0 invert opacity-90 cursor-pointer hover:opacity-100 transition"
+            class="h-12 w-auto brightness-0 invert opacity-90 cursor-pointer hover:opacity-100 transition"
             onclick="scrollToTop()"
           />
         </div>
@@ -1133,12 +1185,10 @@
       </div>
     </footer>
 
-    <div
-      class="fixed bottom-6 right-6 z-[100] flex flex-col items-end gap-3 font-sans"
-    >
+    <div class="fixed bottom-6 right-6 z-[100] font-sans">
       <div
         id="waWidgetCard"
-        class="transform translate-y-10 opacity-0 pointer-events-none transition-all duration-300 origin-bottom-right w-[320px] bg-[#f0f2f5] rounded-2xl shadow-2xl overflow-hidden border border-gray-200 ring-1 ring-black/5"
+        class="absolute bottom-20 right-0 w-[320px] bg-[#f0f2f5] rounded-2xl shadow-2xl overflow-hidden border border-gray-200 ring-1 ring-black/5 transform transition-all duration-300 origin-bottom-right opacity-0 translate-y-10 scale-95 pointer-events-none"
       >
         <div
           class="bg-[#075e54] p-4 flex justify-between items-center text-white"
@@ -1164,18 +1214,21 @@
             </div>
           </div>
           <button
+            id="closeWidgetBtn"
             onclick="toggleWidget()"
-            class="text-white/80 hover:text-white transition p-1"
+            class="text-white/80 hover:text-white transition p-1 rounded-full hover:bg-white/10"
           >
-            <i class="fa-solid fa-xmark text-xl"></i>
+            <i class="fa-solid fa-xmark text-xl pointer-events-none"></i>
           </button>
         </div>
 
-        <div
-          class="p-5 bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')] bg-opacity-10 h-[250px] overflow-y-auto"
-        >
+        <div class="p-5 bg-[#e5ddd5] h-[250px] overflow-y-auto">
           <div
-            class="bg-white p-3 rounded-xl rounded-tl-none shadow-sm text-sm text-gray-800 leading-relaxed relative max-w-[85%] mb-2"
+            class="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')]"
+          ></div>
+
+          <div
+            class="bg-white p-3 rounded-xl rounded-tl-none shadow-sm text-sm text-gray-800 leading-relaxed relative max-w-[85%] mb-2 z-10"
           >
             <p class="mb-1">Halo! 👋</p>
             <p>
@@ -1199,8 +1252,9 @@
       </div>
 
       <button
+        id="waButton"
         onclick="toggleWidget()"
-        class="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white text-3xl shadow-lg hover:scale-110 transition duration-300 relative group z-[101] hover:shadow-green-500/30"
+        class="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white text-3xl shadow-lg hover:shadow-green-500/50 hover:scale-110 transition duration-300 relative group z-[101]"
       >
         <i class="fa-brands fa-whatsapp"></i>
         <span
@@ -1278,25 +1332,31 @@
         }
       };
 
-      // Widget Logic
+      // --- LOGIC WIDGET BARU (FIXED) ---
       function toggleWidget() {
         const widget = document.getElementById("waWidgetCard");
+
         if (widget.classList.contains("opacity-0")) {
+          // Buka
           widget.classList.remove(
             "opacity-0",
             "translate-y-10",
+            "scale-95",
             "pointer-events-none",
           );
+          widget.classList.add("opacity-100", "translate-y-0", "scale-100");
         } else {
+          // Tutup
+          widget.classList.remove("opacity-100", "translate-y-0", "scale-100");
           widget.classList.add(
             "opacity-0",
             "translate-y-10",
+            "scale-95",
             "pointer-events-none",
           );
         }
       }
 
-      // WhatsApp Logic
       const adminNumber = "6289601208920";
 
       function submitFormWidget() {
@@ -1320,16 +1380,22 @@
             alert("Mohon lengkapi nama dan nomor WhatsApp.");
             return;
           }
+          // Tanda bintang (*) membuat teks menjadi Bold di WhatsApp
+          const messageText = 
+            `Halo Admin AturFin,\n\n` +
+            `Saya ingin mengajukan permohonan konsultasi dengan data berikut:\n\n` +
+            `👤 Nama Lengkap : *${name}*\n` +
+            `📱 No. WhatsApp : *${phone}*\n` +
+            `📱 Jumlah Apps  : *${apps}*\n\n` +
+            `Mohon bantuannya untuk analisa masalah ini. Terima kasih.`;
 
-          const message =
-            `Halo Admin AturFin,%0A%0A` +
-            `Saya ingin mengajukan permohonan konsultasi:%0A` +
-            `👤 Nama: *${name}*%0A` +
-            `📱 WhatsApp: *${phone}*%0A` +
-            `📉 Total Apps: *${apps}*%0A%0A` +
-            `Mohon bantuannya. Terima kasih.`;
+          // 2. Fungsi ini WAJIB ada. 
+          // Ini yang mengubah \n menjadi kode WhatsApp yang benar secara otomatis
+          // sehingga simbol  TIDAK AKAN MUNCUL.
+          const encodedMessage = encodeURIComponent(messageText);
 
-          window.open(`https://wa.me/${adminNumber}?text=${message}`, "_blank");
+          // 3. Kirim ke WhatsApp
+          window.open(`https://wa.me/${adminNumber}?text=${encodedMessage}`, "_blank");
         });
 
       // Auto Open Widget
@@ -1338,13 +1404,13 @@
         if (widget.classList.contains("opacity-0")) {
           toggleWidget();
         }
-      }, 5000); // Changed to 5s to be less intrusive
+      }, 5000);
 
       // Smooth Scroll
       function scrollToSection(sectionId) {
         const section = document.getElementById(sectionId);
         if (section) {
-          const yOffset = -80; // Navbar offset
+          const yOffset = -80;
           const y =
             section.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
@@ -1366,25 +1432,26 @@
         }
       }
 
-      // Close items when clicking outside
+      // Close items when clicking outside (FIXED)
       document.addEventListener("click", function (event) {
         // Widget
         const widget = document.getElementById("waWidgetCard");
-        const waButton = document.querySelector('[aria-label="Buka WhatsApp"]');
-        const closeButton = document.querySelector('[aria-label="Tutup"]');
+        const waButton = document.getElementById("waButton");
+        const closeBtn = document.getElementById("closeWidgetBtn");
 
         // Mobile Menu
         const mobileMenu = document.getElementById("mobileMenu");
         const menuBtn = document.querySelector(".md\\:hidden button");
 
-        // Close Widget logic
-        if (
-          !widget.contains(event.target) &&
-          !waButton.contains(event.target) &&
-          event.target !== closeButton &&
-          !widget.classList.contains("opacity-0")
-        ) {
-          toggleWidget();
+        // Close Widget Logic
+        if (!widget.classList.contains("opacity-0")) {
+          // Jika klik BUKAN pada widget, BUKAN pada tombol WA
+          if (
+            !widget.contains(event.target) &&
+            !waButton.contains(event.target)
+          ) {
+            toggleWidget();
+          }
         }
 
         // Close Mobile Menu Logic
