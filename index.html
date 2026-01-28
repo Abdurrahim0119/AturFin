@@ -8,6 +8,7 @@
     />
     <title>AturFin - Solusi Lunas Hutang & Bebas Teror</title>
     <link rel="icon" type="image/png" href="./assets/images/logo-aturfin.png" />
+
     <link href="./src/output.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -121,7 +122,7 @@
     </button>
 
     <nav
-      class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-100 shadow-sm transition-all duration-300"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-xl border-b border-slate-200/50 shadow-sm"
       id="navbar"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -142,6 +143,11 @@
               href="#program"
               class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition"
               >Program</a
+            >
+            <a
+              href="#success-story"
+              class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition"
+              >Cerita Sukses</a
             >
             <a
               href="#services"
@@ -187,37 +193,43 @@
 
       <div
         id="mobileMenu"
-        class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 top-full shadow-xl"
+        class="hidden md:hidden absolute w-full left-0 top-full shadow-xl bg-white/80 backdrop-blur-xl border-t border-slate-100/50"
       >
         <div class="px-4 py-6 space-y-4 flex flex-col">
           <a
             href="#program"
             onclick="toggleMobileMenu()"
-            class="block px-4 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-blue-600"
+            class="block px-4 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-white/50 hover:text-blue-600"
             >Program</a
+          >
+          <a
+            href="#success-story"
+            onclick="toggleMobileMenu()"
+            class="block px-4 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-white/50 hover:text-blue-600"
+            >Cerita Sukses</a
           >
           <a
             href="#services"
             onclick="toggleMobileMenu()"
-            class="block px-4 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-blue-600"
+            class="block px-4 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-white/50 hover:text-blue-600"
             >Layanan</a
           >
           <a
             href="#steps"
             onclick="toggleMobileMenu()"
-            class="block px-4 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-blue-600"
+            class="block px-4 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-white/50 hover:text-blue-600"
             >Cara Kerja</a
           >
           <a
             href="#visimisi"
             onclick="toggleMobileMenu()"
-            class="block px-4 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-blue-600"
+            class="block px-4 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-white/50 hover:text-blue-600"
             >Tentang Kami</a
           >
           <a
             href="#faq"
             onclick="toggleMobileMenu()"
-            class="block px-4 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-blue-600"
+            class="block px-4 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-white/50 hover:text-blue-600"
             >FAQ</a
           >
           <a
@@ -316,7 +328,7 @@
           </div>
 
           <div
-            class="w-full lg:w-1/2 relative mt-8 lg:mt-0"
+            class="w-full lg:w-1/2 relative mt-8 lg:-mt-12"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
@@ -429,6 +441,201 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="success-story" class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl -z-10 opacity-30"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-100 rounded-full blur-3xl -z-10 opacity-30"></div>
+  
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-700 text-xs font-bold tracking-widest uppercase mb-4">
+              Cerita Sukses
+            </span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6">
+              Mereka yang Telah <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Bebas Hutang</span>
+            </h2>
+            <p class="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
+              Ribuan nasabah telah mempercayakan mediasi utangnya kepada AturFin. Berikut adalah pengalaman nyata dari mereka.
+            </p>
+          </div>
+  
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 mb-16 flex flex-wrap justify-between items-center text-center gap-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-full sm:w-auto flex-1 border-b sm:border-b-0 sm:border-r border-slate-100 pb-4 sm:pb-0">
+                <p class="text-3xl font-extrabold text-blue-600">20M+</p>
+                <p class="text-sm text-slate-500 font-medium uppercase tracking-wide">Hutang Teratasi</p>
+            </div>
+            <div class="w-full sm:w-auto flex-1 border-b sm:border-b-0 sm:border-r border-slate-100 pb-4 sm:pb-0">
+                <p class="text-3xl font-extrabold text-green-600">18.000+</p>
+                <p class="text-sm text-slate-500 font-medium uppercase tracking-wide">Nasabah Terbantu</p>
+            </div>
+            <div class="w-full sm:w-auto flex-1">
+                <p class="text-3xl font-extrabold text-slate-800">98%</p>
+                <p class="text-sm text-slate-500 font-medium uppercase tracking-wide">Tingkat Sukses</p>
+            </div>
+          </div>
+  
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 mb-12" data-aos="zoom-in">
+            <div class="flex flex-col lg:flex-row">
+              <div class="lg:w-2/5 bg-gradient-to-br from-slate-900 to-slate-800 p-10 flex flex-col justify-between text-white relative overflow-hidden">
+                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center text-2xl font-bold border-4 border-white/10 shadow-lg">
+                            R
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Rendi</h3>
+                            <p class="text-slate-300 text-sm">Karyawan Swasta</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-xl font-medium leading-relaxed italic opacity-90">
+                        "Dari beban utang yang menekan, kini dapat menjalani hidup dengan lebih tenang."
+                    </blockquote>
+                </div>
+                <div class="mt-8 relative z-10">
+                    <div class="flex items-center gap-2 text-sm text-green-400 font-bold bg-white/5 p-3 rounded-lg backdrop-blur-sm border border-white/5 inline-flex">
+                        <i class="fa-solid fa-circle-check"></i> Kasus Selesai
+                    </div>
+                </div>
+              </div>
+  
+              <div class="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
+                <div class="mb-6">
+                    <i class="fa-solid fa-quote-left text-4xl text-blue-100"></i>
+                </div>
+                <div class="space-y-4 text-slate-600 leading-relaxed text-base lg:text-lg">
+                    <p>
+                        “Saya sempat berada di titik paling tertekan karena utang pinjaman online yang menumpuk. Telepon penagihan datang hampir setiap hari dan membuat saya tidak tenang menjalani aktivitas.
+                    </p>
+                    <p>
+                        Setelah dibantu oleh tim <span class="font-bold text-blue-600">AturFin</span>, kondisi saya mulai berubah. Mereka membantu menata ulang utang saya, berkomunikasi langsung dengan pihak kreditur, dan menyusun skema pembayaran yang sesuai kemampuan saya.
+                    </p>
+                    <p class="font-medium text-slate-800">
+                        Sekarang saya bisa kembali fokus bekerja dan menjalani hidup dengan lebih tenang. AturFin membantu saya bukan hanya menyelesaikan utang, tapi juga mengembalikan ketenangan.”
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold">S</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Sari</h4>
+                            <p class="text-xs text-slate-500">Wiraswasta</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    "Aturfin membantu saya bernegosiasi dengan kreditur tanpa tekanan. Usaha saya bisa tetap berjalan karena skema pembayaran disesuaikan dengan kemampuan."
+                </p>
+            </div>
+  
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">A</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Anggun</h4>
+                            <p class="text-xs text-slate-500">Ibu Rumah Tangga</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    "Saya tidak pernah membayangkan bisa keluar dari tekanan utang secepat ini. Aturfin benar-benar menjadi penolong di saat saya paling membutuhkan."
+                </p>
+            </div>
+  
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center font-bold">R</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Retno</h4>
+                            <p class="text-xs text-slate-500">Karyawan</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    "Saya sering menangis karena tekanan utang. Aturfin mengambil alih komunikasi dengan penagih dan memberi saya ruang untuk bernapas."
+                </p>
+            </div>
+  
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">D</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Doni</h4>
+                            <p class="text-xs text-slate-500">Freelancer</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    "Awalnya saya benar-benar stres menghadapi utang yang menumpuk. Setelah dibantu Aturfin, semuanya jadi lebih terarah. Penagihan berhenti, saya bisa hidup tenang lagi."
+                </p>
+            </div>
+  
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition duration-300" data-aos="fade-up" data-aos-delay="500">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold">S</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Satria</h4>
+                            <p class="text-xs text-slate-500">Pegawai Negeri</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    "Yang paling saya rasakan adalah ketenangan. Aturfin bukan cuma urus utang, tapi juga jadi penengah yang profesional dan manusiawi."
+                </p>
+            </div>
+  
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition duration-300" data-aos="fade-up" data-aos-delay="600">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold">B</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Bima</h4>
+                            <p class="text-xs text-slate-500">Wiraswasta</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    "Prosesnya jelas dan transparan. Saya merasa didampingi dari awal sampai akhir. Aturfin benar-benar solusi yang saya butuhkan."
+                </p>
+            </div>
+          </div>
+  
+          <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="700">
+            <p class="text-slate-500 font-medium mb-6">Sudah siap untuk memulai lembaran baru bebas hutang?</p>
+            <a href="#contact" class="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-bold rounded-full shadow-lg hover:bg-blue-700 hover:shadow-blue-500/30 transition transform hover:-translate-y-1">
+                Konsultasi Gratis Sekarang <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
     </section>
 
     <section id="services" class="py-20 bg-slate-50 relative overflow-hidden">
@@ -1056,7 +1263,9 @@
           <div class="md:w-7/12 p-8 md:p-12 bg-white relative">
             <div
               class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none"
-            ></div>
+            >
+              <i class="fa-brands fa-whatsapp text-9xl"></i>
+            </div>
 
             <h4 class="text-2xl font-bold text-slate-800 mb-2 relative z-10">
               Mulai Langkah Bebas Hutang
@@ -1411,7 +1620,7 @@
             `Saya ingin mengajukan permohonan konsultasi dengan data berikut:\n\n` +
             `👤 Nama Lengkap : *${name}*\n` +
             `📱 No. WhatsApp : *${phone}*\n` +
-            `📱 Jumlah Apps  : *${apps}*\n\n` +
+            `📱 Jumlah Apps  : *${apps}*\n\n` +
             `Mohon bantuannya untuk analisa masalah ini. Terima kasih.`;
 
           const encodedMessage = encodeURIComponent(messageText);
