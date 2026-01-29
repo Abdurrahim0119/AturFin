@@ -1,6 +1,27 @@
+<!-- ============================================= -->
+<!-- FILE-LEVEL / HEADER COMMENT (START) -->
+<!-- ============================================= -->
+<!-- 
+    File: index.html (Landing Page Utama)
+    Tujuan: Halaman utama website AturFin - Solusi Mediasi Hutang Pinjol
+    Author: Tim AturFin
+    Tanggal: [Tanggal pembuatan/update]
+    Versi: 1.0.0
+    Deskripsi: 
+      - Template landing page responsif untuk layanan mediasi hutang
+      - Mengintegrasikan Tailwind CSS, AOS animations, dan Font Awesome
+      - Memuat semua section: Hero, Layanan, Cara Kerja, Testimoni, dll.
+-->
+<!-- ============================================= -->
+<!-- FILE-LEVEL / HEADER COMMENT (END) -->
+<!-- ============================================= -->
+
 <!doctype html>
 <html lang="id" class="scroll-smooth">
   <head>
+    <!-- ========================================= -->
+    <!-- META & RESOURCES CONFIGURATION (START) -->
+    <!-- ========================================= -->
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -9,6 +30,9 @@
     <title>AturFin - Solusi Lunas Hutang & Bebas Teror</title>
     <link rel="icon" type="image/png" href="./assets/images/logo-aturfin.png" />
 
+    <!-- ========================================= -->
+    <!-- EXTERNAL STYLESHEETS (START) -->
+    <!-- ========================================= -->
     <link href="./src/output.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -20,7 +44,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- ========================================= -->
+    <!-- EXTERNAL STYLESHEETS (END) -->
+    <!-- ========================================= -->
 
+    <!-- ========================================= -->
+    <!-- INTERNAL STYLES / CORE STYLES (START) -->
+    <!-- ========================================= -->
     <style>
       /* * =========================================
        * CORE STYLES (START)
@@ -115,12 +145,27 @@
        * =========================================
        */
     </style>
+    <!-- ========================================= -->
+    <!-- INTERNAL STYLES / CORE STYLES (END) -->
+    <!-- ========================================= -->
   </head>
+
   <body
     class="bg-slate-50 text-slate-800 antialiased pt-28 md:pt-40 selection:bg-blue-100 selection:text-blue-700"
   >
+    <!-- ========================================= -->
+    <!-- PROGRESS BAR COMPONENT (START) -->
+    <!-- ========================================= -->
+    <!-- Fungsi: Menampilkan indikator scroll progress di bagian atas halaman -->
     <div id="progressBar"></div>
+    <!-- ========================================= -->
+    <!-- PROGRESS BAR COMPONENT (END) -->
+    <!-- ========================================= -->
 
+    <!-- ========================================= -->
+    <!-- BACK TO TOP BUTTON (START) -->
+    <!-- ========================================= -->
+    <!-- Fungsi: Tombol untuk kembali ke bagian atas halaman dengan smooth scroll -->
     <button
       id="backToTop"
       onclick="scrollToTop()"
@@ -129,12 +174,27 @@
     >
       <i class="fas fa-chevron-up text-sm md:text-base"></i>
     </button>
+    <!-- ========================================= -->
+    <!-- BACK TO TOP BUTTON (END) -->
+    <!-- ========================================= -->
+
+    <!-- ========================================= -->
+    <!-- NAVBAR / HEADER SECTION (START) -->
+    <!-- ========================================= -->
+    <!-- 
+        Modul: Navigation Bar
+        Fungsi: 
+          - Menu navigasi utama website
+          - Responsif (desktop & mobile)
+          - Sticky navigation dengan efek blur
+    -->
     <nav
       class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-xl border-b border-slate-200/50 shadow-sm"
       id="navbar"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20 md:h-32">
+          <!-- Logo -->
           <div
             class="flex-shrink-0 cursor-pointer py-2"
             onclick="scrollToTop()"
@@ -146,6 +206,7 @@
             />
           </div>
 
+          <!-- Desktop Menu -->
           <div class="hidden md:flex items-center space-x-8">
             <a
               href="#program"
@@ -185,6 +246,7 @@
             </a>
           </div>
 
+          <!-- Mobile Menu Toggle -->
           <div class="md:hidden">
             <button
               onclick="toggleMobileMenu()"
@@ -199,6 +261,7 @@
         </div>
       </div>
 
+      <!-- Mobile Menu Dropdown -->
       <div
         id="mobileMenu"
         class="hidden md:hidden absolute w-full left-0 top-full shadow-xl bg-white/80 backdrop-blur-xl border-t border-slate-100/50"
@@ -249,17 +312,33 @@
         </div>
       </div>
     </nav>
+    <!-- ========================================= -->
+    <!-- NAVBAR / HEADER SECTION (END) -->
+    <!-- ========================================= -->
+
+    <!-- ========================================= -->
+    <!-- HERO SECTION (START) -->
+    <!-- ========================================= -->
+    <!-- 
+        Section: Hero/Banner Utama
+        Fungsi: 
+          - Menampilkan value proposition utama
+          - Call-to-action pertama untuk user
+          - Gambar dan teks pembuka
+    -->
     <section
       id="hero"
       class="pt-6 pb-12 md:pt-16 md:pb-24 lg:pt-24 lg:pb-32 bg-gradient-to-b from-blue-50/80 via-white to-white overflow-hidden relative"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+          <!-- Left Content: Headline & CTA -->
           <div
             class="w-full lg:w-1/2 text-center lg:text-left"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
+            <!-- Featured Image -->
             <div
               class="mb-6 md:mb-8 relative group cursor-pointer"
               data-aos="zoom-in"
@@ -275,6 +354,7 @@
               />
             </div>
 
+            <!-- Main Headline -->
             <h1
               class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-slate-900 leading-[1.2] mb-4 md:mb-6"
             >
@@ -285,6 +365,7 @@
               >
             </h1>
 
+            <!-- Subheadline -->
             <p
               class="text-base md:text-lg text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0"
             >
@@ -292,6 +373,7 @@
               kerumitan mediasi tagihan kepada tim mediator profesional kami.
             </p>
 
+            <!-- Call-to-Action Buttons -->
             <div
               class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start mb-10"
             >
@@ -310,6 +392,7 @@
               </button>
             </div>
 
+            <!-- Trust Badge / Verification -->
             <div
               class="flex items-center gap-4 p-4 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition duration-300 max-w-md mx-auto lg:mx-0 cursor-default"
             >
@@ -334,15 +417,18 @@
             </div>
           </div>
 
+          <!-- Right Content: Services Overview -->
           <div
             class="w-full lg:w-1/2 relative mt-8 lg:-mt-12"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
+            <!-- Background Decoration -->
             <div
               class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-blue-200/40 to-cyan-200/40 rounded-full filter blur-3xl -z-10 animate-pulse"
             ></div>
 
+            <!-- Services Card -->
             <div
               class="relative z-10 bg-white/60 backdrop-blur-sm p-6 md:p-8 rounded-3xl border border-white/60 shadow-xl transition duration-500 hover:shadow-2xl"
             >
@@ -362,6 +448,7 @@
                 yang legal dan manusiawi.
               </p>
 
+              <!-- Decorative Icon -->
               <div class="mt-6 flex justify-end">
                 <div
                   class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white animate-bounce"
@@ -374,8 +461,20 @@
         </div>
       </div>
     </section>
+    <!-- ========================================= -->
+    <!-- HERO SECTION (END) -->
+    <!-- ========================================= -->
+
+    <!-- ========================================= -->
+    <!-- PROGRAM STATISTICS SECTION (START) -->
+    <!-- ========================================= -->
+    <!-- 
+        Section: Statistics/Key Metrics
+        Fungsi: Menampilkan angka-angka pencapaian perusahaan untuk membangun trust
+    -->
     <section id="program" class="py-16 bg-white border-b border-slate-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
         <div class="text-center mb-16" data-aos="fade-up">
           <h2
             class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4"
@@ -388,7 +487,9 @@
           </p>
         </div>
 
+        <!-- Statistics Grid -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+          <!-- Statistic 1: Kasus Selesai -->
           <div
             class="text-center p-4 md:p-6 rounded-2xl hover:bg-slate-50 transition duration-300"
             data-aos="fade-up"
@@ -403,6 +504,8 @@
               Kasus Selesai
             </p>
           </div>
+
+          <!-- Statistic 2: Tingkat Sukses -->
           <div
             class="text-center p-4 md:p-6 rounded-2xl hover:bg-slate-50 transition duration-300"
             data-aos="fade-up"
@@ -417,6 +520,8 @@
               Tingkat Sukses
             </p>
           </div>
+
+          <!-- Statistic 3: Bantuan Negosiasi -->
           <div
             class="text-center p-4 md:p-6 rounded-2xl hover:bg-slate-50 transition duration-300"
             data-aos="fade-up"
@@ -431,6 +536,8 @@
               Bantuan Negosiasi
             </p>
           </div>
+
+          <!-- Statistic 4: Hutang Diatasi -->
           <div
             class="text-center p-4 md:p-6 rounded-2xl hover:bg-slate-50 transition duration-300"
             data-aos="fade-up"
@@ -448,7 +555,19 @@
         </div>
       </div>
     </section>
+    <!-- ========================================= -->
+    <!-- PROGRAM STATISTICS SECTION (END) -->
+    <!-- ========================================= -->
+
+    <!-- ========================================= -->
+    <!-- SERVICES DETAILS SECTION (START) -->
+    <!-- ========================================= -->
+    <!-- 
+        Section: Detail Layanan
+        Fungsi: Menjelaskan secara detail layanan-layanan yang ditawarkan
+    -->
     <section id="services" class="py-20 bg-slate-50 relative overflow-hidden">
+      <!-- Background Decorations -->
       <div
         class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-30 pointer-events-none"
       >
@@ -462,6 +581,7 @@
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="flex flex-col lg:flex-row items-center gap-16">
+          <!-- Left: Services List -->
           <div class="w-full lg:w-1/2" data-aos="fade-right">
             <div class="mb-8">
               <span
@@ -471,7 +591,9 @@
               </span>
             </div>
 
+            <!-- Services Grid -->
             <div class="grid grid-cols-1 gap-4">
+              <!-- Service 1: Manajemen Penagihan -->
               <div
                 class="hover-lift p-5 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-start gap-4"
               >
@@ -491,6 +613,7 @@
                 </div>
               </div>
 
+              <!-- Service 2: Pendampingan Mediator -->
               <div
                 class="hover-lift p-5 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-start gap-4"
               >
@@ -510,6 +633,7 @@
                 </div>
               </div>
 
+              <!-- Service 3: Meringankan Tagihan -->
               <div
                 class="hover-lift p-5 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-start gap-4"
               >
@@ -529,6 +653,7 @@
                 </div>
               </div>
 
+              <!-- Service 4: Privasi Mutlak -->
               <div
                 class="hover-lift p-5 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-start gap-4"
               >
@@ -550,6 +675,7 @@
             </div>
           </div>
 
+          <!-- Right: Service Image -->
           <div class="w-full lg:w-1/2" data-aos="fade-left">
             <div class="relative group">
               <div
@@ -565,8 +691,20 @@
         </div>
       </div>
     </section>
+    <!-- ========================================= -->
+    <!-- SERVICES DETAILS SECTION (END) -->
+    <!-- ========================================= -->
+
+    <!-- ========================================= -->
+    <!-- PROCESS / STEPS SECTION (START) -->
+    <!-- ========================================= -->
+    <!-- 
+        Section: Proses 6 Langkah
+        Fungsi: Menjelaskan tahapan proses mediasi hutang dari awal hingga selesai
+    -->
     <section id="steps" class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
         <div class="text-center mb-16" data-aos="fade-up">
           <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
             6 Langkah Menuju Kebebasan
@@ -578,6 +716,7 @@
         </div>
 
         <div class="flex flex-col lg:flex-row items-start gap-12">
+          <!-- Left: Process Image -->
           <div
             class="w-full lg:w-5/12 lg:sticky lg:top-28"
             data-aos="fade-right"
@@ -594,8 +733,10 @@
             </div>
           </div>
 
+          <!-- Right: Steps Grid -->
           <div class="w-full lg:w-7/12">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Step 1: Konsultasi -->
               <div
                 class="hover-lift bg-white p-6 rounded-2xl shadow-md border border-slate-100"
                 data-aos="fade-up"
@@ -615,6 +756,7 @@
                 </p>
               </div>
 
+              <!-- Step 2: Analisis -->
               <div
                 class="hover-lift bg-white p-6 rounded-2xl shadow-md border border-slate-100"
                 data-aos="fade-up"
@@ -634,6 +776,7 @@
                 </p>
               </div>
 
+              <!-- Step 3: Pendampingan -->
               <div
                 class="hover-lift bg-white p-6 rounded-2xl shadow-md border border-slate-100"
                 data-aos="fade-up"
@@ -653,6 +796,7 @@
                 </p>
               </div>
 
+              <!-- Step 4: Negosiasi -->
               <div
                 class="hover-lift bg-white p-6 rounded-2xl shadow-md border border-slate-100"
                 data-aos="fade-up"
@@ -672,6 +816,7 @@
                 </p>
               </div>
 
+              <!-- Step 5: Kesepakatan -->
               <div
                 class="hover-lift bg-white p-6 rounded-2xl shadow-md border border-slate-100"
                 data-aos="fade-up"
@@ -691,6 +836,7 @@
                 </p>
               </div>
 
+              <!-- Step 6: Bebas Hutang -->
               <div
                 class="hover-lift bg-white p-6 rounded-2xl shadow-md border border-slate-100"
                 data-aos="fade-up"
@@ -714,8 +860,20 @@
         </div>
       </div>
     </section>
+    <!-- ========================================= -->
+    <!-- PROCESS / STEPS SECTION (END) -->
+    <!-- ========================================= -->
+
+    <!-- ========================================= -->
+    <!-- VISI MISI SECTION (START) -->
+    <!-- ========================================= -->
+    <!-- 
+        Section: Visi & Misi Perusahaan
+        Fungsi: Menjelaskan tujuan dan nilai-nilai perusahaan
+    -->
     <section id="visimisi" class="py-20 bg-slate-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
         <div class="text-center mb-12">
           <span
             class="text-blue-600 font-bold tracking-wider text-xs bg-white px-3 py-1 rounded-full border border-blue-100 uppercase"
@@ -727,7 +885,9 @@
         </div>
 
         <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <!-- Left: Visi & Misi Content -->
           <div class="w-full lg:w-1/2 order-2 lg:order-1" data-aos="fade-right">
+            <!-- Visi Card -->
             <div
               class="mb-8 bg-white p-6 rounded-2xl shadow-sm border border-slate-100"
             >
@@ -746,6 +906,7 @@
               </p>
             </div>
 
+            <!-- Misi List -->
             <div>
               <div class="flex items-center gap-4 mb-6">
                 <div
@@ -788,6 +949,7 @@
             </div>
           </div>
 
+          <!-- Right: Visi Misi Image -->
           <div class="w-full lg:w-1/2 order-1 lg:order-2" data-aos="fade-left">
             <div class="relative">
               <div
@@ -803,9 +965,21 @@
         </div>
       </div>
     </section>
+    <!-- ========================================= -->
+    <!-- VISI MISI SECTION (END) -->
+    <!-- ========================================= -->
+
+    <!-- ========================================= -->
+    <!-- SOLUTIONS SECTION (START) -->
+    <!-- ========================================= -->
+    <!-- 
+        Section: Solusi Pinjol
+        Fungsi: Menampilkan solusi spesifik untuk masalah pinjaman online
+    -->
     <section id="about" class="py-20 bg-white overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col lg:flex-row items-center gap-16">
+          <!-- Left: Solution Image -->
           <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
             <div class="relative">
               <div
@@ -819,6 +993,7 @@
             </div>
           </div>
 
+          <!-- Right: Solutions List -->
           <div class="w-full lg:w-1/2" data-aos="fade-left">
             <h2
               class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight"
@@ -831,6 +1006,7 @@
             </h2>
 
             <div class="space-y-6">
+              <!-- Solution 1: Perpanjangan Waktu -->
               <div
                 class="flex group hover:bg-slate-50 p-3 rounded-xl transition"
               >
@@ -852,6 +1028,7 @@
                 </div>
               </div>
 
+              <!-- Solution 2: Minimalisir Penagihan -->
               <div
                 class="flex group hover:bg-slate-50 p-3 rounded-xl transition"
               >
@@ -873,6 +1050,7 @@
                 </div>
               </div>
 
+              <!-- Solution 3: Penghapusan Denda -->
               <div
                 class="flex group hover:bg-slate-50 p-3 rounded-xl transition"
               >
@@ -898,8 +1076,20 @@
         </div>
       </div>
     </section>
+    <!-- ========================================= -->
+    <!-- SOLUTIONS SECTION (END) -->
+    <!-- ========================================= -->
+
+    <!-- ========================================= -->
+    <!-- FAQ SECTION (START) -->
+    <!-- ========================================= -->
+    <!-- 
+        Section: Frequently Asked Questions
+        Fungsi: Menjawab pertanyaan umum pengguna dengan accordion
+    -->
     <section id="faq" class="py-16 bg-slate-50">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
         <div class="text-center mb-12" data-aos="fade-up">
           <h2 class="text-3xl font-extrabold text-slate-900 mb-4">
             Pertanyaan yang Sering Diajukan
@@ -910,7 +1100,9 @@
           </p>
         </div>
 
+        <!-- FAQ Accordion -->
         <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+          <!-- FAQ Item 1 -->
           <div
             class="faq-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden"
           >
@@ -933,6 +1125,7 @@
             </div>
           </div>
 
+          <!-- FAQ Item 2 -->
           <div
             class="faq-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden"
           >
@@ -957,6 +1150,7 @@
             </div>
           </div>
 
+          <!-- FAQ Item 3 -->
           <div
             class="faq-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden"
           >
@@ -980,6 +1174,7 @@
             </div>
           </div>
 
+          <!-- FAQ Item 4 -->
           <div
             class="faq-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden"
           >
@@ -1006,10 +1201,22 @@
         </div>
       </div>
     </section>
+    <!-- ========================================= -->
+    <!-- FAQ SECTION (END) -->
+    <!-- ========================================= -->
+
+    <!-- ========================================= -->
+    <!-- SUCCESS STORY SECTION (START) -->
+    <!-- ========================================= -->
+    <!-- 
+        Section: Testimoni & Cerita Sukses
+        Fungsi: Menampilkan testimonial dari klien yang telah berhasil
+    -->
     <section
       id="success-story"
       class="py-24 bg-slate-50 relative overflow-hidden"
     >
+      <!-- Background Decorations -->
       <div
         class="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl -z-10 opacity-30"
       ></div>
@@ -1018,6 +1225,7 @@
       ></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
         <div class="text-center mb-16" data-aos="fade-up">
           <span
             class="inline-block px-4 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-700 text-xs font-bold tracking-widest uppercase mb-4"
@@ -1039,6 +1247,7 @@
           </p>
         </div>
 
+        <!-- Success Statistics -->
         <div
           class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 mb-16 flex flex-wrap justify-between items-center text-center gap-6"
           data-aos="fade-up"
@@ -1074,11 +1283,13 @@
           </div>
         </div>
 
+        <!-- Featured Testimonial -->
         <div
           class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 mb-12"
           data-aos="zoom-in"
         >
           <div class="flex flex-col lg:flex-row">
+            <!-- Left: Testimonial Author -->
             <div
               class="lg:w-2/5 bg-gradient-to-br from-slate-900 to-slate-800 p-10 flex flex-col justify-between text-white relative overflow-hidden"
             >
@@ -1113,6 +1324,7 @@
               </div>
             </div>
 
+            <!-- Right: Testimonial Content -->
             <div class="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
               <div class="mb-6">
                 <i class="fa-solid fa-quote-left text-4xl text-blue-100"></i>
@@ -1121,7 +1333,7 @@
                 class="space-y-4 text-slate-600 leading-relaxed text-base lg:text-lg"
               >
                 <p>
-                  “Saya sempat berada di titik paling tertekan karena hutang
+                  "Saya sempat berada di titik paling tertekan karena hutang
                   pinjaman online yang menumpuk. Telepon penagihan datang hampir
                   setiap hari dan membuat saya tidak tenang menjalani aktivitas.
                 </p>
@@ -1135,16 +1347,18 @@
                 <p class="font-medium text-slate-800">
                   Sekarang saya bisa kembali fokus bekerja dan menjalani hidup
                   dengan lebih tenang. AturFin membantu saya bukan hanya
-                  menyelesaikan hutang, tapi juga mengembalikan ketenangan.”
+                  menyelesaikan hutang, tapi juga mengembalikan ketenangan."
                 </p>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Testimonials Grid -->
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
+          <!-- Testimonial 1 -->
           <div
             class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition duration-300"
             data-aos="fade-up"
@@ -1175,6 +1389,7 @@
             </p>
           </div>
 
+          <!-- Testimonial 2 -->
           <div
             class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition duration-300"
             data-aos="fade-up"
@@ -1205,6 +1420,7 @@
             </p>
           </div>
 
+          <!-- Testimonial 3 -->
           <div
             class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition duration-300"
             data-aos="fade-up"
@@ -1229,11 +1445,13 @@
               </div>
             </div>
             <p class="text-slate-600 text-sm leading-relaxed">
-              "Saya sering menangis karena tekanan hutang. Aturfin mengambil alih
-              komunikasi dengan penagih dan memberi saya ruang untuk bernapas."
+              "Saya sering menangis karena tekanan hutang. Aturfin mengambil
+              alih komunikasi dengan penagih dan memberi saya ruang untuk
+              bernapas."
             </p>
           </div>
 
+          <!-- Testimonial 4 -->
           <div
             class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition duration-300"
             data-aos="fade-up"
@@ -1264,6 +1482,7 @@
             </p>
           </div>
 
+          <!-- Testimonial 5 -->
           <div
             class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition duration-300"
             data-aos="fade-up"
@@ -1294,6 +1513,7 @@
             </p>
           </div>
 
+          <!-- Testimonial 6 -->
           <div
             class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition duration-300"
             data-aos="fade-up"
@@ -1324,6 +1544,7 @@
           </div>
         </div>
 
+        <!-- Call-to-Action -->
         <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="700">
           <p class="text-slate-500 font-medium mb-6">
             Sudah siap untuk memulai lembaran baru bebas hutang?
@@ -1337,12 +1558,24 @@
         </div>
       </div>
     </section>
+    <!-- ========================================= -->
+    <!-- SUCCESS STORY SECTION (END) -->
+    <!-- ========================================= -->
+
+    <!-- ========================================= -->
+    <!-- CONTACT FORM SECTION (START) -->
+    <!-- ========================================= -->
+    <!-- 
+        Section: Form Kontak & Konsultasi
+        Fungsi: Form pengumpulan data lead untuk konsultasi
+    -->
     <section id="contact" class="py-20 bg-white">
       <div class="max-w-5xl mx-auto px-4">
         <div
           class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row border border-slate-100"
           data-aos="zoom-in"
         >
+          <!-- Left: Contact Info -->
           <div class="md:w-5/12 flex flex-col relative bg-blue-900">
             <div class="absolute inset-0 z-0 opacity-20">
               <img
@@ -1371,6 +1604,7 @@
                 menit.
               </p>
 
+              <!-- Benefits List -->
               <div class="space-y-4 text-sm font-medium">
                 <div
                   class="flex items-center gap-3 bg-white/10 p-3 rounded-lg backdrop-blur-sm border border-white/10"
@@ -1396,6 +1630,7 @@
             </div>
           </div>
 
+          <!-- Right: Contact Form -->
           <div class="md:w-7/12 p-8 md:p-12 bg-white relative">
             <div
               class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none"
@@ -1408,7 +1643,9 @@
               Silahkan lengkapi data diri Anda dibawah ini.
             </p>
 
+            <!-- Form -->
             <form id="waForm" class="space-y-5 relative z-10">
+              <!-- Name Field -->
               <div>
                 <label
                   class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1"
@@ -1429,6 +1666,8 @@
                   />
                 </div>
               </div>
+
+              <!-- Phone Field -->
               <div>
                 <label
                   class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1"
@@ -1449,6 +1688,8 @@
                   />
                 </div>
               </div>
+
+              <!-- Apps Count Field -->
               <div>
                 <label
                   class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1"
@@ -1476,6 +1717,7 @@
                 </div>
               </div>
 
+              <!-- Submit Button -->
               <button
                 type="submit"
                 class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-green-500/30 transition transform hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 text-lg"
@@ -1488,8 +1730,23 @@
         </div>
       </div>
     </section>
+    <!-- ========================================= -->
+    <!-- CONTACT FORM SECTION (END) -->
+    <!-- ========================================= -->
+
+    <!-- ========================================= -->
+    <!-- FOOTER SECTION (START) -->
+    <!-- ========================================= -->
+    <!-- 
+        Section: Footer
+        Fungsi: 
+          - Informasi copyright
+          - Link navigasi sekunder
+          - Social media links
+    -->
     <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
       <div class="max-w-7xl mx-auto px-4 text-center">
+        <!-- Logo -->
         <div class="flex items-center justify-center gap-2 mb-6">
           <img
             src="./assets/images/logo-aturfin.png"
@@ -1498,10 +1755,14 @@
             onclick="scrollToTop()"
           />
         </div>
+
+        <!-- Tagline -->
         <p class="mb-8 max-w-md mx-auto text-sm leading-relaxed opacity-70">
           Partner solusi keuangan terpercaya untuk membantu Anda keluar dari
           jeratan hutang dan membangun masa depan yang lebih baik.
         </p>
+
+        <!-- Social Media -->
         <div class="flex justify-center gap-6 mb-8">
           <button
             onclick="openSocial('instagram')"
@@ -1522,6 +1783,8 @@
             <i class="fa-brands fa-facebook-f text-lg"></i>
           </button>
         </div>
+
+        <!-- Copyright & Links -->
         <div class="border-t border-slate-800 pt-8 mt-8">
           <p class="text-xs text-slate-500 mb-4">
             &copy; 2025 AturFin Indonesia. All rights reserved.
@@ -1551,11 +1814,27 @@
         </div>
       </div>
     </footer>
+    <!-- ========================================= -->
+    <!-- FOOTER SECTION (END) -->
+    <!-- ========================================= -->
+
+    <!-- ========================================= -->
+    <!-- WHATSAPP WIDGET COMPONENT (START) -->
+    <!-- ========================================= -->
+    <!-- 
+        Component: WhatsApp Floating Widget
+        Fungsi: 
+          - Chat widget interaktif
+          - Auto-open setelah 5 detik
+          - Form pengiriman pesan otomatis
+    -->
     <div class="fixed bottom-6 right-6 z-[100] font-sans">
+      <!-- Widget Card -->
       <div
         id="waWidgetCard"
         class="absolute bottom-20 right-0 w-[calc(100vw-3rem)] md:w-[320px] bg-[#f0f2f5] rounded-2xl shadow-2xl overflow-hidden border border-gray-200 ring-1 ring-black/5 transform transition-all duration-300 origin-bottom-right opacity-0 translate-y-10 scale-95 pointer-events-none"
       >
+        <!-- Widget Header -->
         <div
           class="bg-[#075e54] p-4 flex justify-between items-center text-white"
         >
@@ -1588,6 +1867,7 @@
           </button>
         </div>
 
+        <!-- Widget Messages -->
         <div class="p-5 bg-[#e5ddd5] h-[250px] overflow-y-auto">
           <div
             class="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')]"
@@ -1607,6 +1887,7 @@
           </div>
         </div>
 
+        <!-- Widget Action Button -->
         <div class="bg-white p-3 border-t border-gray-100">
           <button
             onclick="submitFormWidget()"
@@ -1617,6 +1898,7 @@
         </div>
       </div>
 
+      <!-- Floating WhatsApp Button -->
       <button
         id="waButton"
         onclick="toggleWidget()"
@@ -1629,10 +1911,33 @@
         >
       </button>
     </div>
+    <!-- ========================================= -->
+    <!-- WHATSAPP WIDGET COMPONENT (END) -->
+    <!-- ========================================= -->
 
+    <!-- ========================================= -->
+    <!-- EXTERNAL SCRIPTS (START) -->
+    <!-- ========================================= -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ========================================= -->
+    <!-- EXTERNAL SCRIPTS (END) -->
+    <!-- ========================================= -->
+
+    <!-- ========================================= -->
+    <!-- MAIN JAVASCRIPT MODULE (START) -->
+    <!-- ========================================= -->
+    <!-- 
+        Module: Main JavaScript Functions
+        Fungsi: 
+          - Mengatur semua interaksi website
+          - Animasi, form handling, navigation
+          - WhatsApp widget functionality
+    -->
     <script>
-      // Initialize AOS Animation
+      // =========================================
+      // INITIALIZATION BLOCK (START)
+      // =========================================
+      // Fungsi: Inisialisasi library dan komponen awal
       AOS.init({
         duration: 800,
         once: true,
@@ -1640,7 +1945,15 @@
         easing: "ease-out-cubic",
       });
 
-      // Mobile Menu Toggle
+      // =========================================
+      // NAVIGATION FUNCTIONS (START)
+      // =========================================
+      // Fungsi: Mengelola menu mobile dan navigasi
+
+      /**
+       * Toggle Mobile Menu
+       * Fungsi: Menampilkan/menyembunyikan menu mobile
+       */
       function toggleMobileMenu() {
         const menu = document.getElementById("mobileMenu");
         const icon = document.getElementById("menuIcon");
@@ -1656,7 +1969,11 @@
         }
       }
 
-      // FAQ Accordion Logic
+      /**
+       * Toggle FAQ Accordion
+       * Fungsi: Membuka/menutup item FAQ
+       * @param {HTMLElement} button - Tombol yang diklik
+       */
       function toggleFaq(button) {
         const item = button.parentElement;
         const isActive = item.classList.contains("active");
@@ -1672,7 +1989,15 @@
         }
       }
 
-      // Scroll Event Listener
+      // =========================================
+      // SCROLL FUNCTIONS (START)
+      // =========================================
+      // Fungsi: Mengelola efek scroll dan progress bar
+
+      /**
+       * Scroll Event Handler
+       * Fungsi: Update progress bar dan kontrol visibility elemen
+       */
       window.onscroll = function () {
         let winScroll =
           document.body.scrollTop || document.documentElement.scrollTop;
@@ -1698,12 +2023,45 @@
         }
       };
 
-      // Widget Logic
+      /**
+       * Scroll to Section
+       * Fungsi: Scroll smooth ke section tertentu
+       * @param {string} sectionId - ID section tujuan
+       */
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const yOffset = -80;
+          const y =
+            section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }
+
+      /**
+       * Scroll to Top
+       * Fungsi: Kembali ke atas halaman
+       */
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // =========================================
+      // WHATSAPP WIDGET FUNCTIONS (START)
+      // =========================================
+      // Fungsi: Mengelola widget WhatsApp
+
+      const adminNumber = "6289601208920";
+
+      /**
+       * Toggle WhatsApp Widget
+       * Fungsi: Menampilkan/menyembunyikan widget
+       */
       function toggleWidget() {
         const widget = document.getElementById("waWidgetCard");
 
         if (widget.classList.contains("opacity-0")) {
-          // Buka
+          // Buka widget
           widget.classList.remove(
             "opacity-0",
             "translate-y-10",
@@ -1712,7 +2070,7 @@
           );
           widget.classList.add("opacity-100", "translate-y-0", "scale-100");
         } else {
-          // Tutup
+          // Tutup widget
           widget.classList.remove("opacity-100", "translate-y-0", "scale-100");
           widget.classList.add(
             "opacity-0",
@@ -1723,8 +2081,10 @@
         }
       }
 
-      const adminNumber = "6289601208920";
-
+      /**
+       * Submit Widget Form
+       * Fungsi: Kirim pesan default via WhatsApp
+       */
       function submitFormWidget() {
         const text =
           "Halo AturFin, saya ingin konsultasi mengenai masalah pinjaman online.";
@@ -1734,6 +2094,15 @@
         );
       }
 
+      // =========================================
+      // FORM HANDLING FUNCTIONS (START)
+      // =========================================
+      // Fungsi: Mengelola form submission
+
+      /**
+       * WhatsApp Form Submission
+       * Fungsi: Kirim data form ke WhatsApp
+       */
       document
         .getElementById("waForm")
         .addEventListener("submit", function (e) {
@@ -1763,7 +2132,10 @@
           );
         });
 
-      // Auto Open Widget
+      // =========================================
+      // AUTO-OPEN WIDGET (START)
+      // =========================================
+      // Fungsi: Auto buka widget setelah 5 detik
       setTimeout(() => {
         const widget = document.getElementById("waWidgetCard");
         if (widget.classList.contains("opacity-0")) {
@@ -1771,25 +2143,20 @@
         }
       }, 5000);
 
-      // Smooth Scroll
-      function scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (section) {
-          const yOffset = -80;
-          const y =
-            section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: "smooth" });
-        }
-      }
+      // =========================================
+      // SOCIAL MEDIA FUNCTIONS (START)
+      // =========================================
+      // Fungsi: Membuka link social media
 
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-
+      /**
+       * Open Social Media
+       * Fungsi: Buka link social media di tab baru
+       * @param {string} platform - Nama platform social media
+       */
       function openSocial(platform) {
         const urls = {
           instagram:
-            "hhttps://www.instagram.com/aturfin.id?igsh=eDA4enQ4NGhsaWZr",
+            "https://www.instagram.com/aturfin.id?igsh=eDA4enQ4NGhsaWZr",
           tiktok: "https://tiktok.com/@aturfin",
           facebook: "https://facebook.com/aturfin",
         };
@@ -1798,7 +2165,15 @@
         }
       }
 
-      // Close items when clicking outside
+      // =========================================
+      // CLICK OUTSIDE HANDLER (START)
+      // =========================================
+      // Fungsi: Menutup widget/menu saat klik di luar
+
+      /**
+       * Close on Outside Click
+       * Fungsi: Tutup widget/menu saat klik di luar area
+       */
       document.addEventListener("click", function (event) {
         const widget = document.getElementById("waWidgetCard");
         const waButton = document.getElementById("waButton");
@@ -1825,5 +2200,8 @@
         }
       });
     </script>
+    <!-- ========================================= -->
+    <!-- MAIN JAVASCRIPT MODULE (END) -->
+    <!-- ========================================= -->
   </body>
 </html>
